@@ -1,0 +1,19 @@
+{
+  "name": "bennington_wellbeing_assessment",
+  "version": "1.0.0",
+  "description": "Returns resources based off of user's responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/fivegrant/bennington_wellbeing_assessment.git"
+  },
+  "author": "Five Grant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fivegrant/bennington_wellbeing_assessment/issues"
+  },
+  "homepage": "https://github.com/fivegrant/bennington_wellbeing_assessment#readme"
+}
