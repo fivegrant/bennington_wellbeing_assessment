@@ -2,7 +2,7 @@
   "name": "bennington_wellbeing_assessment",
   "version": "1.0.0",
   "description": "Returns resources based off of user's responses",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/fivegrant/bennington_wellbeing_assessment/issues"
   },
-  "homepage": "https://github.com/fivegrant/bennington_wellbeing_assessment#readme"
+  "homepage": "https://github.com/fivegrant/bennington_wellbeing_assessment#readme",
+  "dependencies": {}
 }
