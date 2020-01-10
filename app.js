@@ -8,7 +8,9 @@ var config = JSON.parse(fs.readFile(config.json));
 var section = "social";
 for (division of config){
   if(section == division.name){
-    section = division.content;
+    section = survey(division.content);
+    break
   }
 }
+
 
