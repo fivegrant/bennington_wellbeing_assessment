@@ -1,4 +1,14 @@
-## Configuration in `config.json` 
+## Current Configuration
+```
+{
+  { "name": "NAME OF SECTION: Social, Spirtual, etc",
+    "questions": ["Some Question?", "Another Question?", "Question?"],
+    "response" : ["INTEGER: Represents <= to this integer": "Some response", "INTEGER: Represents <= to this integer": "Some response"]
+  }
+}
+```
+
+## Potential Configuration in `config.json` for more advanced functionality
 ```
 {
   { "name": "NAME OF SECTION: Social, Spirtual, etc",
