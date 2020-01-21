@@ -10,7 +10,8 @@
        "I feel safe on campus during the day."
     ],
     "response" : {  "27": "You may be looking for ways to improve your environmental wellbeing.", 
-                  "49": " Your environmental wellbeing is good, ways in which you can improve it are..."}
+                    "49": " Your environmental wellbeing is good, ways in which you can improve it are...",
+		    "0": "Perfect"}
   },
   { "name": "Test & Stuff",
     "questions": [
@@ -21,6 +22,7 @@
        "Big Bird"
     ],
     "response" : {  "9": "More", 
-                  "22": "Good"}
+                    "22": "Good",
+		    "0": "Perfect"}
   }
 ]
