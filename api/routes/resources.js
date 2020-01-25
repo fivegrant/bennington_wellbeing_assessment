@@ -7,8 +7,7 @@ var configuration = require(apiRoot + "/control.json");
 router.get('/', function(req, res, next) {
   let result = { title: req.query.dimension, 
                  material: "No Results",
-	         component: "resources"};
-  
+	         component: "results"};
   for (var item of configuration){
     if(item.name == req.query.dimension){
       result.material = item.response["0"];

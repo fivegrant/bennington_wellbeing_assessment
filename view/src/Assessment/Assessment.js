@@ -45,7 +45,6 @@ function Assessment(props) {
   };
 
 
-
   const selections = props.material.map(listLikert) ;
   let clickFunction = () => props.onChange(`/resources?dimension=${encodeURIComponent(props.title)}&score=${encodeURIComponent(getSum(answers))}`)
 
