@@ -5,7 +5,7 @@ function Results(props) {
   let clickFunction = () => props.onChange(`/assessments`)
   return (<div>
   	  <p className="results">{props.material}</p>
-          <a href="/#" onClick={clickFunction}>Back to Main Menu</a>
+          <a href="/#" onClick={clickFunction} className="transition-button">Back to Main Menu</a>
 	  </div>);
 }
 

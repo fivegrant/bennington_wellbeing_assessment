@@ -12,8 +12,15 @@ let defaultLikert = [
 		 {value: 7, text: "Strongly Agree"}
 		]
 
-function getSum(values){
-  return values.reduce(((x, y) => (x+y)));
+function getValues(values){
+  let response = '';
+  let counter = 1;
+  for (var val of values){
+    response += `${val}`;
+    if(counter < values.length) response += " ";
+    counter += 1;
+  }
+  return response;
 }
 
 function Assessment(props) {
@@ -46,11 +53,11 @@ function Assessment(props) {
 
 
   const selections = props.material.map(listLikert) ;
-  let clickFunction = () => props.onChange(`/resources?dimension=${encodeURIComponent(props.title)}&score=${encodeURIComponent(getSum(answers))}`)
+  let clickFunction = () => props.onChange(`/resources?dimension=${encodeURIComponent(props.title)}&score=${encodeURIComponent(getValues(answers))}`)
 
   return (<div>
             {selections}
-            <a href="/#" onClick={clickFunction}>Submit</a>
+            <a href="/#" onClick={clickFunction} className="transition-button">Submit</a>
           </div>);
 }
 
