@@ -11,7 +11,6 @@ function getSum(values){
 
 function parseValues(unprocessed){
   let parsed = unprocessed.split(" ");
-  console.log(parsed.map(coerceInt))
   return parsed.map(coerceInt);
 }
 
@@ -22,8 +21,17 @@ router.get('/', function(req, res, next) {
 	         component: "results"};
   
   scoreSum = getSum(parseValues(req.query.score));
+  scores = parseValues(req.query.score);
+  sqlList = [];
   for (var item of configuration){
     if(item.name == req.query.dimension){
+      counter = 0;
+      for (var q of item.questions){
+        sqlList.push({question: q, 
+	              score: scores[counter], 
+		      dimension: req.query.dimension});
+	counter ++;
+      }
       result.material = item.response["0"];
       for (var bound of Object.getOwnPropertyNames(item.response)){
         if(scoreSum < coerceInt(bound)){

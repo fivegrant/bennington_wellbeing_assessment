@@ -1,0 +1,23 @@
+.questions {
+  background-color:rgba(255,255,255,.85);
+  margin: 0% 18% 1% 18%;
+}
+
+label.likertResponse>input:checked+.likertIndicator {
+    background-color: #34eb64;
+}
+
+span.likertIndicator {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 0.5em;
+  border: thin solid #870230;
+  background-color: gray;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  box-sizing: border-box;
+}
+

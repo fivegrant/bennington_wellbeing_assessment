@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
   for (var item of configuration){
     results.push(item.name);
   }
-  res.json({ title: "Choose a Dimension of Wellbeing:", 
+  res.json({ title: "Dimensions", 
              material: results,
 	     component: "menu"});
 });

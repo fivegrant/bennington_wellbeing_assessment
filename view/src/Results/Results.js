@@ -4,8 +4,8 @@ import './Results.scss';
 function Results(props) {
   let clickFunction = () => props.onChange(`/assessments`)
   return (<div>
-  	  <p className="results">{props.material}</p>
-          <a href="/#" onClick={clickFunction} className="transition-button">Back to Main Menu</a>
+  	  <div className="results">{props.material}</div>
+          <div className="transition-button" href="/#" onClick={clickFunction}>Dimensions</div>
 	  </div>);
 }
 

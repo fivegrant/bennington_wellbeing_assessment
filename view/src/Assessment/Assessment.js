@@ -6,7 +6,7 @@ let defaultLikert = [
 		 {value: 1, text: "Strongly Disagree"},
 		 {value: 2, text: "Disagree"},
 	         {value: 3, text: "Slightly disagree"},
-		 {value: 4, text: "Mixed or neither agree nor disagree"},
+		 {value: 4, text: "Neutral"},
 		 {value: 5, text: "Slightly agree"},
 		 {value: 6, text: "Agree"},
 		 {value: 7, text: "Strongly Agree"}
@@ -55,9 +55,9 @@ function Assessment(props) {
   const selections = props.material.map(listLikert) ;
   let clickFunction = () => props.onChange(`/resources?dimension=${encodeURIComponent(props.title)}&score=${encodeURIComponent(getValues(answers))}`)
 
-  return (<div>
-            {selections}
-            <a href="/#" onClick={clickFunction} className="transition-button">Submit</a>
+  return (<div >
+            <div className="questions">{selections}</div>
+            <div className="transition-button" onClick={clickFunction}>Submit</div>
           </div>);
 }
 
