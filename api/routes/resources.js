@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var apiRoot = require('app-root-path');
 var configuration = require(apiRoot + "/control.json");
+var sql = require(apiRoot + "/sql");
 
 const coerceInt = (value) => value - 0;
 
@@ -41,6 +42,12 @@ router.get('/', function(req, res, next) {
       }
       break
     }
+  }
+  try {
+    sql.sqlInsert(sqlList);
+  }
+  catch(err) {
+    console.log("ERROR: Failed to initialize SQL Procedure");
   }
   res.json(result);
 });
